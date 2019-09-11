@@ -1,0 +1,150 @@
+﻿TODO
+	[ ] vSlice message to user:  "Double Click" to see file contents  (or an icon)
+		[ ] vSlice: Double-click should go to contents
+	[ ] Comma formatting for large numbers
+	[ ] right-click context menu:  Go to root
+	[ ] right-click context menu:  Center on this folder
+	[ ] When a filter is added, keep a snapshot of the filtered tree and work from that to improve filter speed
+		- retake the snapshot when a filter is removed
+
+
+NEW
+
+SOON
+    [ ] righy-click Export to tsv
+	[ ] Export details button in the details view that exports all children to a .tsv file of your choice.
+    [ ] vSlice: Use a DelimitedString class (already added) to reduce memory requirement by 75%
+    [ ] Use back mouse button to zoom out (https://stackoverflow.com/questions/16284999/mouse-extra-buttons-in-wpf)
+    [ ] vslice: In the status window, allow explorer-like navigation by clicking parts of the path
+        [ ] Hover should show a tooltop and not update the status bar
+
+
+LATER, MAYBE
+	[ ] Custom filter sets from a file - help users get to exactly the data they want to see
+	[ ] Starts/Ends with filter
+    [ ] Checkbox to filter directories:  Show me only directories that have less than 100 items
+    [ ] Add true disk size to file size
+
+
+DONE
+2.9.4.0
+	[x] Bug: Heat map is really broken
+	[x] Show heatmap column next to value column in details view
+	[x] Button to clean current filter
+    [x] double-click does not work well.
+
+2.9.3.0
+	[x] Auto-update on new version
+	[x] Selected piece is not highlighted
+	[x] Spreadsheet import setting not remembererd?
+	[x] Try to smartly pick some options for the filter
+	[x] Should only be able to select a row in the detail view
+
+2.8
+	[x] Drop in a spreadsheet
+		[x] Add a dummy spreadsheet plugin
+		[x] Accept a dropped spreadsheet
+		[x] Determine columns for path and for total
+	
+	[x] Correctly handle content with the spreadsheet
+		[x] Refactor Item data and tree handling
+		[x] Correctly assign content for spreadsheets
+	[x] Fix file ctrl-click
+	[x] Change numeric marker on the fly
+		[x] units are "MB"  - make "M" for now
+	[x] Turn into a legit MVVM app with full data binding
+	[x] Heat mapping - Each plugin exposes possible heatmap columns
+	[x] Filtering
+		[x] Name
+		[x] Path
+		[x] Content
+
+	[x] Auto-adjust minimum visible sweep with resize
+	
+
+	[x] Safely auto-discover the handlers
+	[x] Make treehandlers and observable collection and add the outlook handler asynchronously
+2.4
+	[x] Warn about cosmos credentials
+	[x] Manual source entry
+    [x] Cancel button
+    [x] Check for newer version
+	[x] Bug fixed: outlook crashes on certain folders
+	[x] Bug fixed: Cosmos ctrl-click doesn't work.  add slash to the end of the URL
+
+2.3.2
+    [x] BUG: Fix drag and drop from shortcut
+
+
+
+Interesting items    
+    [ ] Show the total space in the upper right
+    [ ] Show/Hide System files (Give the user hints on files they probably should not delete)
+    [ ] Detect duplicate files
+    [ ] Yes/No show free space
+    [ ] Show mini pie chart indicating size of current view compared to the disk
+    [ ] Add a tooltip that follows the mouse around and displays the same folder name and size data which currently appears only at the bottom of the screen.
+    [ ] Sometimes if a folder is thousands of times bigger than its siblings the siblings are not visible in the graphical display. To get around that, it'd be cool if you could right click a huge folder, see a list of its siblings, select a sibling and have the tool shift focus to that sibling, just as if I HAD been able to see it in the graphic display and had clicked on it.
+    [ ] When displaying labels, let me rotate the chart, but keep the labels level. This could make it so the particular labels I'm interested in don't overwrite each other.
+
+
+Maybe if more people ask ...
+    [ ] Add zoom buttons in the middle (back, waaay back)
+    [ ] Yes/No show “Reparse” points (Aka links, mappings, etc.)
+    [ ] Make the status more visible
+    [ ] show the hover text under the mouse cursor
+    [ ] Double clicking should do something
+    [ ] Right mouse click should bring up a context menu
+    [ ] Add a page to Customize actions such as double-click
+    [ ] Add ability to open a powershell window
+    [ ] Improve chart labeling
+    [ ] Transactional delete
+    [ ] Take snapshots and diff them
+    [ ] Show a sorted directory list
+    [ ] currently, if a directory is too small it isn't rendered, find an better way to handle small dirs
+    [ ] Conglomerate drives (helps with duplicate detection)
+    [ ] Get to vSlice from the Drive Properties dialog
+    [ ] Create a plugin for home server
+    [ ] Show utilization patterns to help put busy files on different spindles  (x2)
+    [ ] Improve the scan process to show what has been scanned, allow interaction, show progress
+
+DONE
+Version 2.2.0.0
+    [x] Add ability to scan the well known registry hives
+
+Version 2.1.1.0 -----------------------------------------
+    [x] Doesn't handle circular refs in the file system
+        - Disable WOW64 FS redirection 
+        - Don't traverse directory junctions 
+
+Version 2.1.0.0 -----------------------------------------
+    [x] Add ability to scan Outlook mail usage
+        http://msdn.microsoft.com/en-us/library/aa289167.aspx
+		[x] Set up a list of tree handlers
+		[x] Get a list of seeds from the different tree handlers
+		[x] Implement outlook reader
+		[x] Drag and drop needs to check the available handlers
+	[x] Fix the slice directory names
+	[x] Move slice directoryinfo to FileSystemScanner
+	[x] Create a better icon
+	[x] Sometimes we get two scans??
+	[x] Bug: Clicking on the content of the root folder goes backward 1 instead of showing the content
+
+
+Version 2.0.0.0 -----------------------------------------
+    [x] Convert to WPF 
+		[x] Hovering over a piece highlights it
+		[x] Hovering over a piece updates the detail box
+		[x] Click on a directory drills down
+		[x] Click on the middle circle drills up
+		[x] Format the bytes pretty
+		[x] Click on the file piece shows the files and permanently highlights the file piece
+		[x] Shift-click opens up explorer
+		[x] ctrl-click open up command window
+		[x] Drag and drop work with folders
+		[x] Clean up the colors
+    [x] Make "VSlice" a big part of the UI
+	[x] Make the highlight pretty
+	[x] Clean up the demo text in the dialog boxes
+	[x] Clean up the file list
+
