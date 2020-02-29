@@ -836,7 +836,12 @@ namespace VSlice
                     {
                         newRow[SelectedHeatmapColumn] = contentItem.GetValue(SelectedHeatmapColumn);
                     }
-                    newRow[StandardColumns.NAME] = contentItem.FullName.Substring(rootTreeItem.FullName.Length + 1);
+                    var name = contentItem.FullName;
+                    if(name.ToLower().StartsWith(rootTreeItem.FullName.ToLower()))
+                    {
+                        name = name.Substring(rootTreeItem.FullName.Length + 1);
+                    }
+                    newRow[StandardColumns.NAME] = name;
                     newRow[StandardColumns.PATHDEPTH] = contentItem.GetValue(StandardColumns.PATHDEPTH);
 
                     for (int i = specialColumnCount; i < newTable.Columns.Count; i++)
